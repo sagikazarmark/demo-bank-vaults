@@ -1,0 +1,9 @@
+kind: Deploy
+type: kubernetes
+name: vault
+dependencies:
+  - deploy.vault-operator
+spec:
+  namespace: vault
+  kustomize:
+    path: .

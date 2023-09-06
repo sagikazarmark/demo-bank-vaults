@@ -1,0 +1,7 @@
+kind: Deploy
+type: helm
+name: vault-secrets-webhook
+spec:
+  namespace: vault-system
+  chart:
+    name: oci://ghcr.io/bank-vaults/helm-charts/vault-secrets-webhook

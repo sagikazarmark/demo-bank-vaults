@@ -1,0 +1,11 @@
+kind: Deploy
+type: kubernetes
+name: demo
+dependencies:
+  - deploy.vault
+  - deploy.vault-secrets-webhook
+disabled: true
+spec:
+  namespace: demo
+  kustomize:
+    path: .
